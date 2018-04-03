@@ -1,0 +1,39 @@
+<!--
+  Generated template for the SocialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+   <ion-navbar style="background: #BF1C20;">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+       
+        <div style=" top: 0;
+                     left: 0;
+                     width: 60%;
+                     height: 100%;
+                     text-align: center;
+                     margin-left: 10%;" > 
+            <img src="../assets/imgs/easyclick_app_w.png"/>
+        </div>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let user of users" >
+            <ion-avatar item-start >
+                <img (click)="GoDetalles(user.id)" src="http://app.easyclick.com.mx/assets/clients/{{user.id }}/{{user.id }}_tumb.jpg">
+            </ion-avatar>
+            <h2> {{user.nombre | uppercase}} </h2>
+            <p> {{user.eslogan }} </p>
+            <p> {{user.direccion }} </p>
+        </ion-item>
+	</ion-list>
+</ion-content>
